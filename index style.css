@@ -5,6 +5,13 @@
     font-family:fantasy;
 }
 
+html{
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+/* 메인 배경화면 설정 */
+
 .hero{
     width: 100%;
     height: 100vh;
@@ -14,29 +21,94 @@
     position: relative;
 }
 
+/* 서브 배경화면1: 민지 */
+
+#back-minji{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/minji-back.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.minji{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    margin: 0;
+}
+
+.m-text{
+    color: #fff;
+    font-size: 100px;
+    padding: 50px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.m-text:hover{
+    -webkit-text-stroke: 1px #fff;
+    color: rgba(109, 119, 255, 0.850);
+}
+
+/* 서브 배경화면2: 해린 */
+
+.back-haerin{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/haerin-back.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.haerin{
+    position: absolute;
+    top: 20%;
+    right: 10%;
+}
+
+.h-text{
+    color: #fff;
+    text-align: center;
+    font-size: 100px;
+    padding: 50px;
+    transition: 0.5s;
+}
+
+.h-text:hover{
+    -webkit-text-stroke: 1px #fff;
+    color: rgba(109, 119, 255, 0.850);
+}
+
+/* nav: 상단 네비게이션 바 */
+
 nav{
     width: 100%;
-    height: 150px;
+    height: 120px;
     background-color: rgba(109, 119, 255, 0.850);
-    box-shadow: 10px 10px 100px black;
-    position: absolute;
+    box-shadow: 10px 10px 100px rgb(255, 255, 255, 0.7);
+    position: fixed;
     top: 0;
     left: 0;
     padding: 30px 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 1;
 }
 
 nav .logo{
     display: flex;
     align-items: center;
+    justify-content: center;
     font-size: 30px;
     color:#fff;
 }
 
 nav .logo img{
-    width: 75px;
+    width: 65px;
     margin-right: 15px;
 }
 
@@ -44,6 +116,7 @@ nav ul li{
     list-style: none;
     display: inline-block;
     margin-left: 30px;
+    font-size: 25px;
 }
 
 nav ul li .line{
@@ -54,13 +127,61 @@ nav ul li .line{
 nav ul li a{
     text-decoration: none;
     color: rgb(255, 255, 255);
-    font-size: 25px;
     transition: 0.5s;
 }
 
 nav ul li a:hover{
     color:aquamarine;
 }
+
+/* picarc: Picture Archive 서브 네비게이션 바 설정용 추가 클래스 */
+
+.picarc{
+    font-size: 25px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.picarc:hover{
+    color:aquamarine;
+}
+
+/* sub-menu: Picture Archive 밑 서브 네비게이션 바 */
+
+#sub-menu-1{
+    display: none;
+    color: #fff;  
+}
+
+.menu li:hover #sub-menu-1{
+    display: block;
+    position: absolute;
+    background: rgba(109, 119, 255, 0.850);
+    border-radius: 20px;
+    margin-left: -15px;
+    padding: 5px 0px;
+}
+
+.menu li:hover #sub-menu-1 ul{
+    display: block;
+    margin: 10px;
+}
+
+.menu li:hover #sub-menu-1 ul li{
+    display: block;
+    text-align: left;
+    width: 150px;
+    padding: 7px 0px;
+    background: transparent;
+    transition: 0.5s;
+    font-size: 20px;
+}
+
+.menu li:hover #sub-menu-1 ul li:hover{
+    color:aquamarine;
+}
+
+/* content: 메인 배경화면 중앙에 작성되어 있는 콘텐츠 */
 
 .content{
     position: absolute;
@@ -85,6 +206,8 @@ nav ul li a:hover{
     font-size: 40px;
     color: #fff;
 }
+
+/* explore: 서브 배경으로 넘어가기 위한 클릭 바*/
 
 .explore{
     width: 200px;
@@ -120,23 +243,26 @@ nav ul li a:hover{
     width: 100%;
 }
 
+/* ud: 하단 네비게이션 바 */
+
 .ud{
     width: 100%;
-    height: 90px;
+    height: 80px;
     background-color: rgba(109, 119, 255, 0.850);
-    box-shadow: 10px 10px 100px black;
-    position: absolute;
+    box-shadow: 10px 10px 100px rgb(255, 255, 255, 0.7);
+    position: fixed;
     bottom: 0;
     right: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 12px 5%;
+    z-index: 1;
 }
 
 .ud ul li{
     list-style: none;
     text-align: center;
     color: #fff;
-    font-size: 20px;
+    font-size: 17px;
 }

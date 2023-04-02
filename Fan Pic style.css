@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: fantasy;
+}
+
+/* hero: 배경화면 맞춤 */
+
+body{
+
+    background-color: rgb(76, 78, 95);
+}
+
+/* 상단 네비게이션 바 시작 */
+
+.tnav{
+    width: 100%;
+    height: 150px;
+    background-color: rgba(109, 119, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+
+    grid-row: 1;
+    grid-column: 1/2;
+}
+
+.tit h3{
+    font-size: 30px;
+    font-weight: 550;
+}
+
+.tit h4{
+    font-size: 25px;
+    font-weight: 450;
+    text-align: center;
+}
+
+nav .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color:#fff;
+}
+
+nav .logo img{
+    width: 75px;
+    margin-right: 15px;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 30px;
+    font-size: 25px;
+}
+
+nav ul li .line{
+    padding-left: 30px;
+    border-left: 1px solid #fff;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+nav ul li a:hover{
+    color:aquamarine;
+}
+
+.picarc{
+    font-size: 25px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.picarc:hover{
+    color:aquamarine;
+}
+
+#sub-menu-1{
+    display: none;
+    color: #fff;
+}
+
+.menu li:hover #sub-menu-1{
+    display: block;
+    position: absolute;
+    background: rgba(109, 119, 255, 0.850);
+    border-radius: 20px;
+    margin-left: -15px;
+    padding: 5px 0px;
+}
+
+.menu li:hover #sub-menu-1 ul{
+    display: block;
+    margin: 10px;
+}
+
+.menu li:hover #sub-menu-1 ul li{
+    display: block;
+    text-align: left;
+    width: 150px;
+    padding: 7px 0px;
+    background: transparent;
+    transition: 0.5s;
+    font-size: 20px;
+}
+
+.menu li:hover #sub-menu-1 ul li:hover{
+    color:aquamarine;
+}
+
+/* 상단 네비게이션바 끝, 좌측 네비게이션 바 시작*/
+
+.lnav{
+    width: 200px;
+    height: 100%;
+    background-color: rgba(109, 119, 255);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 150px;
+
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.lnav ul{
+    list-style: none;
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.lnav ul li{
+    padding: 5px;
+}
+
+.lnav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.lnav ul li:first-child{
+    text-decoration: underline #fff;
+    text-underline-offset: 5px;
+}
+
+.lnav ul li a:hover{
+    color:aquamarine;
+}
+
+/* 좌측 네비게이션 바와 테이블 간의 grid */
+
+.table{
+    color: #fff;
+    font-size: 20px;
+    margin: auto;
+    margin-top: 50px;
+
+    grid-row: 2;
+    grid-column: 2;
+}
+
+table{
+    border: 1px solid cadetblue;
+    margin: 3px;
+}
+
+table th{
+    border: 1px solid cadetblue;
+    padding: 5px;
+}
+
+table tr td{
+    border: 1px solid cadetblue;
+}
+
+.table tr td a{
+    text-decoration: underline;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.table tr td a:hover{
+    color: aquamarine;
+}
+
+.grid{
+    display: grid;
+    grid-template-rows: 150px 1fr;
+    grid-template-columns: 200px 1fr;
+    height: 100%;
+}
+
